@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          docker-compose -f docker-compose.yml run --rm tests
+          npm test
 
       - name: Push Docker image
         run: docker push ghcr.io/${{ github.repository }}:latest
