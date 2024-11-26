@@ -56,7 +56,7 @@ jobs:
             echo "Tag $new_tag already exists locally."
           else
             git tag -a "$new_tag" -m "Test release"
-            git push https://x-access-token:${{ secrets.ACCESS }}@github.com/mattsimoessilva/docker-project.git "$new_tag"
+            git push https://x-access-token:${{ secrets.ACCESS }}@github.com/mattsimoessilva/video-chat.git "$new_tag"
           fi
 
           echo "::set-output name=new_tag::$new_tag"
