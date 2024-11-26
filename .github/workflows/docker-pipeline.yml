@@ -22,6 +22,9 @@ jobs:
       - name: Build Docker image
         run: docker build -t ghcr.io/${{ github.repository }}:latest -f ./Dockerfile .
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Run Tests
         run: |
           npm test
